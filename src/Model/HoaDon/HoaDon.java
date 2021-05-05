@@ -9,13 +9,14 @@ import Model.Nguoi.KhachHang;
 import Model.SanPham.SanPham;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  *
  * @author SUN_LIFE
  */
 public class HoaDon {
-    private SanPham sanPham;
+    private List<SanPham> cacSanPham;
     private double tongThanhToan;
     private Date ngayXuatHoaDon;
     private KhachHang nguoiMuaHang;
@@ -23,8 +24,8 @@ public class HoaDon {
     private String maHoaDon;
 
 
-    public HoaDon(SanPham sanPham, double tongThanhToan, Date ngayXuatHoaDon, KhachHang nguoiMuaHang, String maHoaDon) {
-        this.sanPham = sanPham;
+    public HoaDon(List<SanPham> cacSanPham, double tongThanhToan, Date ngayXuatHoaDon, KhachHang nguoiMuaHang, String maHoaDon) {
+        this.cacSanPham = cacSanPham;
         this.tongThanhToan = tongThanhToan;
         this.ngayXuatHoaDon = ngayXuatHoaDon;
         this.nguoiMuaHang = nguoiMuaHang;
@@ -32,12 +33,12 @@ public class HoaDon {
 
     }
 
-    public SanPham getSanPham() {
-        return sanPham;
+    public List<SanPham>  getSanPham() {
+        return cacSanPham;
     }
 
-    public void setSanPham(SanPham sanPham) {
-        this.sanPham = sanPham;
+    public void setSanPham(List<SanPham> cacSanPham) {
+        this.cacSanPham = cacSanPham;
     }
 
     public double getTongThanhToan() {

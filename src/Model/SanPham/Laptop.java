@@ -11,15 +11,18 @@ package Model.SanPham;
  */
 public class Laptop extends SanPham{
     private double khoiLuong;
-    private boolean cardManHinh;
-
+    private String ram;
+    private String viXuLy;
+    private String oCung;
     public Laptop() {
     }
 
-    public Laptop(double khoiLuong, boolean cardManHinh, String tenSanPham, String hangSanXuat, String model, double gia, String maSanPham, int thoiGianBaoHanh) {
+    public Laptop(double khoiLuong, String tenSanPham, String hangSanXuat, String model, double gia, String maSanPham, int thoiGianBaoHanh,String ram,String viXuLy,String oCung) {
         super(tenSanPham, hangSanXuat, model, gia, maSanPham, thoiGianBaoHanh);
         this.khoiLuong = khoiLuong;
-        this.cardManHinh = cardManHinh;
+        this.ram = ram;
+        this.viXuLy = viXuLy;
+        this.oCung = oCung;
     }
 
     public double getKhoiLuong() {
@@ -30,14 +33,30 @@ public class Laptop extends SanPham{
         this.khoiLuong = khoiLuong;
     }
 
-    public boolean isCardManHinh() {
-        return cardManHinh;
+    public String getRam() {
+        return ram;
     }
 
-    public void setCardManHinh(boolean cardManHinh) {
-        this.cardManHinh = cardManHinh;
+    public void setRam(String ram) {
+        this.ram = ram;
     }
-    
+
+    public String getViXuLy() {
+        return viXuLy;
+    }
+
+    public void setViXuLy(String viXuLy) {
+        this.viXuLy = viXuLy;
+    }
+
+    public String getoCung() {
+        return oCung;
+    }
+
+    public void setoCung(String oCung) {
+        this.oCung = oCung;
+    }
+
     public String inTTin() {
         return "Ten Laptop: " + getTenSanPham() +
                 ", Hang San Xuat: " + getHangSanXuat()+
@@ -46,6 +65,8 @@ public class Laptop extends SanPham{
                 ", Ma San Pham: " + getMaSanPham() +
                 ", Thoi Gian Bao Hanh: " + getThoiGianBaoHanh() + 
                 ", Khoi Luong: " + getKhoiLuong() + 
-                ", Card Man Hinh: " + isCardManHinh();
+                ", Ram: " + getRam() +
+                ", Vi Xu Ly: " + getViXuLy() +
+                ", O Cung: " + getoCung();
     }
 }

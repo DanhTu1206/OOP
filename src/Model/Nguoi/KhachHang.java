@@ -10,26 +10,26 @@ package Model.Nguoi;
  * @author SUN_LIFE
  */
 public class KhachHang extends Nguoi{
-    private int idKhachHang;
+    private int maKhachHang;
     private int soSanPhamDaMua;
     private double diemTichLuy;
 
     public KhachHang() {
     }
 
-    public KhachHang(int idKhachHang, int soSanPhamDaMua, double diemTichLuy, String hoTen, String soDienThoai) {
+    public KhachHang(int maKhachHang, int soSanPhamDaMua, double diemTichLuy, String hoTen, String soDienThoai) {
         super(hoTen, soDienThoai);
-        this.idKhachHang = idKhachHang;
+        this.maKhachHang = maKhachHang;
         this.soSanPhamDaMua = soSanPhamDaMua;
         this.diemTichLuy = diemTichLuy;
     }
 
-    public int getIdKhachHang() {
-        return idKhachHang;
+    public int getMaKhachHang() {
+        return maKhachHang;
     }
 
-    public void setIdKhachHang(int idKhachHang) {
-        this.idKhachHang = idKhachHang;
+    public void setMaKhachHang(int idKhachHang) {
+        this.maKhachHang = idKhachHang;
     }
 
     public int getSoSanPhamDaMua() {
@@ -51,7 +51,7 @@ public class KhachHang extends Nguoi{
     public String inTTin() {
         return "Ho Ten Khach Hang: " + getHoTen() + 
                 ", So Dien Thoai: " + getSoDienThoai() + 
-                ", ID Khach Hang: " + getIdKhachHang() + 
+                ", ID Khach Hang: " + getMaKhachHang() +
                 ", So San Pham Da Mua: " + getSoSanPhamDaMua() + 
                 ", Diem Tich Luy: " + getDiemTichLuy();
     }
