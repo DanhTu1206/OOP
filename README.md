@@ -15,12 +15,3 @@ Xây dựng một hệ thống quản lý của hàng gồm các chức năng:
 -Tính toán doanh thu/lợi nhuận của của hàng trong một khoảng thời gian nhập vào 
 (dựa trên giá nhập/bán của các sản phẩm)
 
-Phân chia các chức năng:
- 1: -Thêm, bớt, sửa, xóa một sản phẩm trong cửa hàng.
-    -Tìm kiếm sản phẩm theo tên sản phẩm, hãng sản xuất. Hiển thị tất cả các thông tin sản phẩm tìm được.
- 2: -Chức năng thanh toán cho khách mua sản phẩm, cập nhật lại thông tin về sản phẩm sau khi mua/bán.
-    -Khi làm chức năng này cần tạo cả hóa đơn trong cả csdl.
- 3: -Tính toán doanh thu/lợi nhuận của của hàng trong một khoảng thời gian nhập vào 
-    (dựa trên giá nhập/bán của các sản phẩm)
-    
-Mỗi người tự tạo dữ liệu theo diagram. Làm xong chức năng sẽ làm giao diện.
