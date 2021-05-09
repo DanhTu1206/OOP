@@ -1,33 +1,90 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Hàm Đối Tượng Điện Thoại (viết trực tiếp, ko thừa kế lớp sản phẩm nữa)
 package Model.SanPham;
 
-/**
- *
- * @author SUN_LIFE
- */
-public class DienThoai extends SanPham{
+import java.io.Serializable;
+
+public class DienThoai implements Serializable{
+	
+	private String tenSanPham, hangSanXuat, model, maSanPham;
+    private int soLuong, thoiGianBaoHanh;
+    protected double gia;
     private double kichThuocManHinh;
     private double thoiLuongPin;
     private double doPhanGiaiCamera;
-    private boolean chongNuoc;
 
     public DienThoai() {
     }
 
-    public DienThoai(double kichThuocManHinh, double thoiLuongPin, double doPhanGiaiCamera, boolean chongNuoc, String tenSanPham, String hanSanXuat, String model, double gia, String maSanPham, int thoiGianBaoHanh) {
-        super(tenSanPham, hanSanXuat, model, gia, maSanPham, thoiGianBaoHanh);
+    public DienThoai(String tenSanPham, String hangSanXuat, String model,String maSanPham,int soLuong, double gia,
+    		int thoiGianBaoHanh,double kichThuocManHinh, double thoiLuongPin, double doPhanGiaiCamera) {
+    	this.tenSanPham = tenSanPham;
+        this.hangSanXuat = hangSanXuat;
+        this.model = model;
+        this.gia = gia;
+        this.maSanPham = maSanPham;
+        this.soLuong = soLuong;
+        this.thoiGianBaoHanh = thoiGianBaoHanh;
         this.kichThuocManHinh = kichThuocManHinh;
         this.thoiLuongPin = thoiLuongPin;
         this.doPhanGiaiCamera = doPhanGiaiCamera;
-        this.chongNuoc = chongNuoc;
+    }
+    
+    public String getTenSanPham() {
+        return tenSanPham;
     }
 
-   
+    public void setTenSanPham(String tenSanPham) {
+        this.tenSanPham = tenSanPham;
+    }
 
+    public String getHangSanXuat() {
+        return hangSanXuat;
+    }
+
+    public void setHanSanXuat(String hanSanXuat) {
+        this.hangSanXuat = hanSanXuat;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public double getGia() {
+        return gia;
+    }
+
+    public void setGia(double gia) {
+        this.gia = gia;
+    }
+
+    public String getMaSanPham() {
+        return maSanPham;
+    }
+
+    public void setMaSanPham(String maSanPham) {
+        this.maSanPham = maSanPham;
+    }
+    
+    public int getSoLuong() {
+    	return soLuong;
+    }
+    
+    public void setSoLuong(int soLuong) {
+    	this.soLuong = soLuong;
+    }
+    
+    public int getThoiGianBaoHanh() {
+        return thoiGianBaoHanh;
+    }
+
+    public void setThoiGianBaoHanh(int thoiGianBaoHanh) {
+        this.thoiGianBaoHanh = thoiGianBaoHanh;
+    }
+    
     public double getKichThuocManHinh() {
         return kichThuocManHinh;
     }
@@ -50,29 +107,5 @@ public class DienThoai extends SanPham{
 
     public void setDoPhanGiaiCamera(double doPhanGiaiCamera) {
         this.doPhanGiaiCamera = doPhanGiaiCamera;
-    }
-
-    public String isChongNuoc() {
-        if(chongNuoc) {
-            return "Yes";
-        }
-        return "No";
-    }
-
-    public void setChongNuoc(boolean chongNuoc) {
-        this.chongNuoc = chongNuoc;
-    }
-    
-    public String inTTin() {
-        return "Ten Dien Thoai: " + getTenSanPham() +
-                ", Hang San Xuat: " + getHangSanXuat()+
-                ", Model: " + getModel()+
-                ", Gia: " + getGia() + 
-                ", Ma San Pham: " + getMaSanPham() +
-                ", Thoi Gian Bao Hanh: " + getThoiGianBaoHanh() + 
-                ", Kich Thuoc Man Hinh: " + getKichThuocManHinh() + 
-                ", Thoi Luong Pin: " + getThoiLuongPin() + 
-                ", Do Phan Giai Camera: " + getDoPhanGiaiCamera() + 
-                ", Chong nuoc: " + isChongNuoc();
     }
 }
